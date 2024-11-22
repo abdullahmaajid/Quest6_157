@@ -138,3 +138,19 @@ fun MahasiswaFormView(
             }
         )
 
+        // Buttons
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(16.dp) // Space between buttons
+        ) {
+            Button(
+                onClick = { onbackbuttonClicked() },
+                modifier = Modifier.weight(1f), // Make button size equal
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = colorResource(id = R.color.primary)
+                ),
+                shape = RoundedCornerShape(50.dp)
+            ) {
+                Text(text = "Kembali", color = Color.White)
+            }
+
