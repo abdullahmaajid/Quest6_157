@@ -1,5 +1,4 @@
 package com.example.navigasidengandata.ui.view.screen
-
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -30,6 +29,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.navigasidengandata.R
 
+
 @Composable
 fun MahasiswaFormView(
     onSubmitButton: (MutableList<String>) -> Unit,
@@ -39,6 +39,7 @@ fun MahasiswaFormView(
     var nim by remember { mutableStateOf("") }
     var email by remember { mutableStateOf("") }
     var listData: MutableList<String> = mutableListOf(nim, nama, email)
+
 
     Column(
         modifier = Modifier
@@ -78,6 +79,9 @@ fun MahasiswaFormView(
             }
         }
 
+
+
+
         Box(
             modifier = Modifier
                 .background(
@@ -86,86 +90,112 @@ fun MahasiswaFormView(
                 )
                 .fillMaxSize()
                 .padding(top = 40.dp) // Add padding to avoid content being too close to top
-        )
-        // Input Fields
-        OutlinedTextField(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(bottom = 12.dp), // Add padding between fields
-            shape = RoundedCornerShape(50.dp),
-            value = nim,
-            onValueChange = { nim = it },
-            label = { Text(text = "Nomor Induk Mahasiswa") },
-            leadingIcon = {
-                Icon(
-                    imageVector = Icons.Filled.Info,
-                    contentDescription = ""
-                )
-            }
-        )
-
-
-        OutlinedTextField(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(bottom = 12.dp), // Add padding between fields
-            shape = RoundedCornerShape(50.dp),
-            value = nama,
-            onValueChange = { nama = it },
-            label = { Text(text = "Masukkan Nama Anda") },
-            leadingIcon = {
-                Icon(
-                    imageVector = Icons.Filled.Person,
-                    contentDescription = ""
-                )
-            }
-        )
-
-
-        OutlinedTextField(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(bottom = 20.dp), // Add padding between fields
-            shape = RoundedCornerShape(50.dp),
-            value = email,
-            onValueChange = { email = it },
-            label = { Text(text = "Masukkan Email") },
-            leadingIcon = {
-                Icon(
-                    imageVector = Icons.Filled.Email,
-                    contentDescription = ""
-                )
-            }
-        )
-
-        // Buttons
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(16.dp) // Space between buttons
         ) {
-            Button(
-                onClick = { onbackbuttonClicked() },
-                modifier = Modifier.weight(1f), // Make button size equal
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = colorResource(id = R.color.primary)
-                ),
-                shape = RoundedCornerShape(50.dp)
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(horizontal = 16.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Text(text = "Kembali", color = Color.White)
-            }
-            Button(
-                onClick = { onSubmitButton(listData) },
-                modifier = Modifier.weight(1f), // Make button size equal
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = colorResource(id = R.color.primary)
-                ),
-                shape = RoundedCornerShape(50.dp)
-            ) {
-                Text(text = "Simpan", color = Color.White)
+                Text(
+                    text = "Masukkan Data Kamu",
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 20.sp,
+                    color = Color.Black,
+                    modifier = Modifier.padding(vertical = 8.dp) // Add spacing
+                )
+
+
+                Text(
+                    text = "Isi Sesuai data yang kamu daftarkan",
+                    fontWeight = FontWeight.Normal,
+                    color = Color.Gray,
+                    fontSize = 14.sp,
+                    modifier = Modifier.padding(bottom = 20.dp) // Add spacing below instruction text
+                )
+
+
+                // Input Fields
+                OutlinedTextField(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(bottom = 12.dp), // Add padding between fields
+                    shape = RoundedCornerShape(50.dp),
+                    value = nim,
+                    onValueChange = { nim = it },
+                    label = { Text(text = "Nomor Induk Mahasiswa") },
+                    leadingIcon = {
+                        Icon(
+                            imageVector = Icons.Filled.Info,
+                            contentDescription = ""
+                        )
+                    }
+                )
+
+
+                OutlinedTextField(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(bottom = 12.dp), // Add padding between fields
+                    shape = RoundedCornerShape(50.dp),
+                    value = nama,
+                    onValueChange = { nama = it },
+                    label = { Text(text = "Masukkan Nama Anda") },
+                    leadingIcon = {
+                        Icon(
+                            imageVector = Icons.Filled.Person,
+                            contentDescription = ""
+                        )
+                    }
+                )
+
+
+                OutlinedTextField(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(bottom = 20.dp), // Add padding between fields
+                    shape = RoundedCornerShape(50.dp),
+                    value = email,
+                    onValueChange = { email = it },
+                    label = { Text(text = "Masukkan Email") },
+                    leadingIcon = {
+                        Icon(
+                            imageVector = Icons.Filled.Email,
+                            contentDescription = ""
+                        )
+                    }
+                )
+
+
+                // Buttons
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(16.dp) // Space between buttons
+                ) {
+                    Button(
+                        onClick = { onbackbuttonClicked() },
+                        modifier = Modifier.weight(1f), // Make button size equal
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = colorResource(id = R.color.primary)
+                        ),
+                        shape = RoundedCornerShape(50.dp)
+                    ) {
+                        Text(text = "Kembali", color = Color.White)
+                    }
+
+
+                    Button(
+                        onClick = { onSubmitButton(listData) },
+                        modifier = Modifier.weight(1f), // Make button size equal
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = colorResource(id = R.color.primary)
+                        ),
+                        shape = RoundedCornerShape(50.dp)
+                    ) {
+                        Text(text = "Simpan", color = Color.White)
+                    }
+                }
             }
         }
     }
 }
-
-
-
