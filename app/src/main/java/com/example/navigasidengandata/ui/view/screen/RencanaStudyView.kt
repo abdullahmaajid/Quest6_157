@@ -112,3 +112,11 @@ fun RencanaStudyView(
                     )
                 }
             }
+// Bell Icon Section
+            Icon(
+                imageVector = Icons.Filled.Notifications,
+                contentDescription = "Notifications",
+                tint = Color.White,
+                modifier = Modifier.size(24.dp)
+            )
+        }
