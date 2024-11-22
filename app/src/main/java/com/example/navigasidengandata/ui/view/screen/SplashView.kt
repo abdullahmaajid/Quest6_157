@@ -37,3 +37,15 @@ fun SplashView(
             contentDescription = "",
             modifier = Modifier.size(200.dp)
         )
+// Start button with updated styles
+        Button(
+            onClick = {
+                onMulaiButton()
+            },
+            modifier = Modifier
+                .fillMaxWidth(0.7f)  // Make button less wide
+                .padding(26.dp),  // Adjust padding for better balance
+            colors = androidx.compose.material3.ButtonDefaults.buttonColors(
+                containerColor = Color.Yellow // Set button color to yellow
+            )
+        )
