@@ -19,3 +19,21 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.navigasidengandata.R
+
+@Composable
+fun SplashView(
+    onMulaiButton: () -> Unit,
+) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(color = colorResource(id = R.color.primary)),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        // Logo image
+        Image(
+            painter = painterResource(R.drawable.umy2),
+            contentDescription = "",
+            modifier = Modifier.size(200.dp)
+        )
