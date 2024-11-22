@@ -87,4 +87,54 @@ fun MahasiswaFormView(
                 .fillMaxSize()
                 .padding(top = 40.dp) // Add padding to avoid content being too close to top
         )
+        // Input Fields
+        OutlinedTextField(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(bottom = 12.dp), // Add padding between fields
+            shape = RoundedCornerShape(50.dp),
+            value = nim,
+            onValueChange = { nim = it },
+            label = { Text(text = "Nomor Induk Mahasiswa") },
+            leadingIcon = {
+                Icon(
+                    imageVector = Icons.Filled.Info,
+                    contentDescription = ""
+                )
+            }
+        )
+
+
+        OutlinedTextField(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(bottom = 12.dp), // Add padding between fields
+            shape = RoundedCornerShape(50.dp),
+            value = nama,
+            onValueChange = { nama = it },
+            label = { Text(text = "Masukkan Nama Anda") },
+            leadingIcon = {
+                Icon(
+                    imageVector = Icons.Filled.Person,
+                    contentDescription = ""
+                )
+            }
+        )
+
+
+        OutlinedTextField(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(bottom = 20.dp), // Add padding between fields
+            shape = RoundedCornerShape(50.dp),
+            value = email,
+            onValueChange = { email = it },
+            label = { Text(text = "Masukkan Email") },
+            leadingIcon = {
+                Icon(
+                    imageVector = Icons.Filled.Email,
+                    contentDescription = ""
+                )
+            }
+        )
 
