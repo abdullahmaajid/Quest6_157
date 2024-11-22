@@ -16,3 +16,10 @@ import com.example.navigasidengandata.ui.view.screen.SplashView
 import com.example.navigasidengandata.ui.view.screen.TampilView
 import com.example.navigasidengandata.ui.view.viewmodel.MahasiswaViewModel
 import com.example.navigasidengandata.ui.view.viewmodel.RencanaStudyViewModel
+
+enum class Halaman {
+    Splash,
+    Mahasiswa,
+    Peminatan,
+    TampilKrs
+}
