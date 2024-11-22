@@ -207,6 +207,19 @@ fun RencanaStudyView(
                 Text(text = "Klausul Persetujuan Mahasiswa", fontWeight = FontWeight.Bold)
 
 
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Checkbox(
+                        checked = checked,
+                        onCheckedChange = { checked = it },
+                        enabled = chosenDropdown.isNotBlank() && pilihanKelas.isNotBlank()
+                    )
+                    Text(
+                        text = "Saya Menyetujui setiap pernyataan yang ada tanpa ada paksaan dari pihak manapun.",
+                        fontWeight = FontWeight.Light,
+                        fontSize = 10.sp,
+                        modifier = Modifier.padding(start = 4.dp)
+                    )
+                }
 
 
 
