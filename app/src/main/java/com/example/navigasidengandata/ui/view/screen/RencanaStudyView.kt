@@ -78,4 +78,37 @@ fun RencanaStudyView(
                 .fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween
-        )
+        ) {
+            // Logo Section
+            Row(
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Image(
+                    painter = painterResource(id = R.drawable.umy2),
+                    contentDescription = "Logo",
+                    modifier = Modifier.size(50.dp)
+                )
+                Spacer(modifier = Modifier.width(16.dp)) // Jarak antara gambar dan teks
+                Column(
+                    modifier = Modifier.width(IntrinsicSize.Max)
+                ) {
+                    Text(
+                        text = mahasiswa.nama,
+                        color = Color.Red,
+                        fontSize = 18.sp,
+                        fontWeight = FontWeight.Bold,
+                        fontFamily = FontFamily.Serif,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis
+                    )
+                    Text(
+                        text = mahasiswa.nim,
+                        color = Color.Red,
+                        fontSize = 14.sp,
+                        fontWeight = FontWeight.Normal,
+                        fontFamily = FontFamily.Serif,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis
+                    )
+                }
+            }
