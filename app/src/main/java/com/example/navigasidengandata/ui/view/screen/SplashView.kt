@@ -49,3 +49,13 @@ fun SplashView(
                 containerColor = Color.Yellow // Set button color to yellow
             )
         )
+        {
+            Text(
+                text = "Mulai",
+                color = Color.DarkGray,  // Set text color to dark gray (abu tua)
+                fontWeight = androidx.compose.ui.text.font.FontWeight.Bold  // Make text bold
+            )
+        }
+    }
+}
+
