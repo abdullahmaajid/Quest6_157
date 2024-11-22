@@ -120,3 +120,16 @@ fun RencanaStudyView(
                 modifier = Modifier.size(24.dp)
             )
         }
+// Form Section
+        Box(
+            modifier = Modifier
+                .background(
+                    color = Color.White,
+                    shape = RoundedCornerShape(
+                        topEnd = 15.dp,
+                        topStart = 15.dp
+                    )
+                )
+                .fillMaxWidth()
+                .padding(16.dp)
+        )
