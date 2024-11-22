@@ -29,3 +29,25 @@ fun DynamicSelectedField(
     onValueChangedEvent: (String) -> Unit,
     modifier: Modifier = Modifier
 )
+{
+    var expanded by remember { mutableStateOf(false) }
+
+
+    ExposedDropdownMenuBox(
+        expanded = expanded,
+        onExpandedChange = {expanded = !expanded},
+        modifier = Modifier
+    ){
+        OutlinedTextField(
+            readOnly = true,
+            value = selectedValue,
+            onValueChange = {},
+            label = { Text(text = label) },
+            trailingIcon ={
+                ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded)
+            },
+            colors = OutlinedTextFieldDefaults.colors(),
+            modifier = Modifier.
+            menuAnchor()
+                .fillMaxWidth()
+        )
