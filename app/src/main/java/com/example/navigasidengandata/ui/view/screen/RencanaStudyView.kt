@@ -196,6 +196,17 @@ fun RencanaStudyView(
                         }
                     }
                 }
+                Spacer(modifier = Modifier.padding(8.dp))
+
+
+                // Divider
+                HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
+
+
+                // Klausul Persetujuan Mahasiswa
+                Text(text = "Klausul Persetujuan Mahasiswa", fontWeight = FontWeight.Bold)
+
+
 
 
 
