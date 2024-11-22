@@ -65,4 +65,15 @@ fun TampilView(
                     fontWeight = FontWeight.Light
                 )
             }
-        }
+        } // Form dengan sudut melengkung
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(Color.White, shape = androidx.compose.foundation.shape.RoundedCornerShape(16.dp))
+                .padding(16.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween
+            )
