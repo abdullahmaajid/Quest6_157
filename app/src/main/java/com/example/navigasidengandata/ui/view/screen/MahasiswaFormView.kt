@@ -29,3 +29,16 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.navigasidengandata.R
+
+@Composable
+fun MahasiswaFormView(
+    onSubmitButton: (MutableList<String>) -> Unit,
+    onbackbuttonClicked: () -> Unit
+) {
+    var nama by remember { mutableStateOf("") }
+    var nim by remember { mutableStateOf("") }
+    var email by remember { mutableStateOf("") }
+    var listData: MutableList<String> = mutableListOf(nim, nama, email)
+
+
+
