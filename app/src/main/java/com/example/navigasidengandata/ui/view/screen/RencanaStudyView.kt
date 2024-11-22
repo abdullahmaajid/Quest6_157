@@ -220,6 +220,25 @@ fun RencanaStudyView(
                         modifier = Modifier.padding(start = 4.dp)
                     )
                 }
+                Spacer(modifier = Modifier.padding(8.dp))
+
+
+                // Buttons Section
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceEvenly
+                ) {
+                    // Back Button
+                    Button(
+                        onClick = { onbackbuttonClicked() },
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = colorResource(id = R.color.primary),
+                            contentColor = Color.White
+                        ),
+                        modifier = Modifier.padding(8.dp)
+                    ) {
+                        Text(text = "Kembali")
+                    }
 
 
 
