@@ -66,3 +66,16 @@ fun RencanaStudyView(
 
 
     var listData: MutableList<String> = mutableListOf(chosenDropdown, pilihanKelas)
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(color = colorResource(id = R.color.primary))
+    ) {
+        Row(
+            modifier = Modifier
+                .padding(horizontal = 20.dp, vertical = 16.dp)
+                .fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.SpaceBetween
+        )
