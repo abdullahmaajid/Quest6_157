@@ -40,4 +40,29 @@ fun TampilView(
             .fillMaxSize()
             .background(colorResource(id = R.color.primary)),
         horizontalAlignment = Alignment.CenterHorizontally
-    )
+    ) {
+        Spacer(modifier = Modifier.padding(top = 16.dp))
+        Row(
+            modifier = Modifier.padding(16.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Image(
+                painter = painterResource(id = R.drawable.umy2),
+                contentDescription = "umy",
+                modifier = Modifier.size(45.dp)
+            )
+            Spacer(modifier = Modifier.padding(start = 16.dp))
+            Column {
+                Text(
+                    text = "Data KRS Mahasiswa",
+                    color = Color.White,
+                    fontSize = 15.sp,
+                    fontWeight = FontWeight.Bold
+                )
+                Text(
+                    text = "Universitas Muhammadiyah Yogyakarta",
+                    color = Color.White,
+                    fontWeight = FontWeight.Light
+                )
+            }
+        }
