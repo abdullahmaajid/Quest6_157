@@ -153,4 +153,20 @@ fun MahasiswaFormView(
             ) {
                 Text(text = "Kembali", color = Color.White)
             }
+            Button(
+                onClick = { onSubmitButton(listData) },
+                modifier = Modifier.weight(1f), // Make button size equal
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = colorResource(id = R.color.primary)
+                ),
+                shape = RoundedCornerShape(50.dp)
+            ) {
+                Text(text = "Simpan", color = Color.White)
+            }
+        }
+    }
+}
+}
+}
+
 
