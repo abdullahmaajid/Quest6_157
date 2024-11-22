@@ -76,4 +76,42 @@ fun TampilView(
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween
-            )
+            ) {
+                Column {
+                    Text(
+                        text = "Nim:",
+                        fontWeight = androidx.compose.ui.text.font.FontWeight.Bold,
+                        fontSize = 14.sp
+                    )
+                    Text(
+                        text = mahasiswa.nim,
+                        fontStyle = androidx.compose.ui.text.font.FontStyle.Italic,
+                        fontSize = 14.sp
+                    )
+                    Text(
+                        text = "Nama:",
+                        fontWeight = androidx.compose.ui.text.font.FontWeight.Bold,
+                        fontSize = 14.sp
+                    )
+                    Text(
+                        text = mahasiswa.nama,
+                        fontStyle = androidx.compose.ui.text.font.FontStyle.Italic,
+                        fontSize = 14.sp
+                    )
+
+
+                    Text(
+                        text = "Email:",
+                        fontWeight = androidx.compose.ui.text.font.FontWeight.Bold,
+                        fontSize = 14.sp
+                    )
+
+
+                    Text(
+                        text = mahasiswa.email,
+                        fontWeight = androidx.compose.ui.text.font.FontWeight.Bold,
+                        fontSize = 14.sp
+                    )
+                }
+            }
+
