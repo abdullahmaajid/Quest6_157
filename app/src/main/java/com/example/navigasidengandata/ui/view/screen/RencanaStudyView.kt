@@ -132,4 +132,34 @@ fun RencanaStudyView(
                 )
                 .fillMaxWidth()
                 .padding(16.dp)
-        )
+        ) {
+            Column(
+                modifier = Modifier.fillMaxSize()
+            ) {
+                // Title and Description
+                Text(
+                    text = "Pilih Mata Kuliah Peminatan",
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 18.sp
+                )
+                Text(
+                    text = "Silahkan pilih mata kuliah yang anda inginkan",
+                    fontSize = 12.sp,
+                    fontWeight = FontWeight.Light,
+                    color = Color.Gray
+                )
+
+
+                Spacer(modifier = Modifier.padding(8.dp))
+
+
+                // Mata Kuliah Dropdown
+                DynamicSelectedField(
+                    selectedValue = chosenDropdown,
+                    options = MataKuliah.options,
+                    label = "Mata Kuliah",
+                    onValueChangedEvent = {
+                        chosenDropdown = it
+                    }
+                )
+
