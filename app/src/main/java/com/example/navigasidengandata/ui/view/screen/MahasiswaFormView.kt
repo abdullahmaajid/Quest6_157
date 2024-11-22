@@ -40,5 +40,42 @@ fun MahasiswaFormView(
     var email by remember { mutableStateOf("") }
     var listData: MutableList<String> = mutableListOf(nim, nama, email)
 
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(color = colorResource(id = R.color.primary))
+    ) {
+        Row(
+            modifier = Modifier
+                .padding(horizontal = 40.dp, vertical = 20.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(30.dp) // Add space between logo and text
+        ) {
+            Image(
+                painter = painterResource(id = R.drawable.umy2),
+                contentDescription = "",
+                modifier = Modifier.size(80.dp)  // Set logo size
+            )
+
+
+            Column {
+                Text(
+                    text = "Universitas Muhammadiyah Yogyakarta",
+                    color = Color.Red, // Change to white for better contrast
+                    fontSize = 16.sp,
+                    fontWeight = FontWeight.Bold,
+                    fontFamily = FontFamily.Serif // Set to serif font
+                )
+
+
+                Text(
+                    text = "Unggul dan Islami",
+                    color = Color.Red, // Change to white for better contrast
+                    fontWeight = FontWeight.Normal,
+                    fontSize = 14.sp,
+                    fontFamily = FontFamily.Serif // Set to serif font
+                )
+            }
+        }
 
 
