@@ -26,3 +26,18 @@ import androidx.compose.ui.unit.sp
 import com.example.navigasidengandata.R
 import com.example.navigasidengandata.model.Mahasiswa
 import com.example.navigasidengandata.ui.model.RencanaStudi
+
+//@Preview(showBackground = true)
+@Composable
+fun TampilView(
+    mahasiswa: Mahasiswa,
+    krs: RencanaStudi,
+    onbackbuttonClicked: () -> Unit,
+    onResetButtonClicked: () -> Unit,
+) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(colorResource(id = R.color.primary)),
+        horizontalAlignment = Alignment.CenterHorizontally
+    )
