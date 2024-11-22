@@ -239,6 +239,23 @@ fun RencanaStudyView(
                     ) {
                         Text(text = "Kembali")
                     }
+// Next Button
+                    Button(
+                        onClick = { onSubmitButton(listData) },
+                        enabled = checked,
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = colorResource(id = R.color.primary),
+                            contentColor = Color.White
+                        ),
+                        modifier = Modifier.padding(8.dp)
+                    ) {
+                        Text(text = "Berikutnya")
+                    }
+                }
+            }
+        }
+    }
+}
 
 
 
