@@ -114,4 +114,33 @@ fun TampilView(
                     )
                 }
             }
+            Spacer(modifier = Modifier.padding(16.dp))
+
+
+            Column(
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text(
+                    text = "Matakuliah yang diambil:",
+                    fontWeight = androidx.compose.ui.text.font.FontWeight.Bold,
+                    fontSize = 14.sp
+                )
+                Text(
+                    text = krs.namaMK,
+                    fontStyle = androidx.compose.ui.text.font.FontStyle.Italic,
+                    fontSize = 14.sp
+                )
+                Row {
+                    Text(
+                        text = "Kelas:",
+                        fontWeight = androidx.compose.ui.text.font.FontWeight.Bold,
+                        fontSize = 14.sp
+                    )
+                    Text(
+                        text = krs.kelas,
+                        fontStyle = androidx.compose.ui.text.font.FontStyle.Italic,
+                        fontSize = 14.sp
+                    )
+                }
+            }
 
