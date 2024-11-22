@@ -160,3 +160,17 @@ fun TampilView(
                 ) {
                     Text(text = "Kembali")
                 }
+                Button(
+                    onClick = { onResetButtonClicked() },
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = colorResource(id = R.color.primary),
+                        contentColor = Color.White
+                    )
+                ) {
+                    Text(text = "Reset")
+                }
+            }
+        }
+    }
+}
+
