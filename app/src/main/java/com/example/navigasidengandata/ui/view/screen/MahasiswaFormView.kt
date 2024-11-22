@@ -78,4 +78,13 @@ fun MahasiswaFormView(
             }
         }
 
+        Box(
+            modifier = Modifier
+                .background(
+                    color = Color.White,
+                    shape = RoundedCornerShape(topEnd = 15.dp, topStart = 15.dp)
+                )
+                .fillMaxSize()
+                .padding(top = 40.dp) // Add padding to avoid content being too close to top
+        )
 
