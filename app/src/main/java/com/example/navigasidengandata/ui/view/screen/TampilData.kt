@@ -143,4 +143,20 @@ fun TampilView(
                     )
                 }
             }
+            Spacer(modifier = Modifier.padding(16.dp))
 
+
+            // Tombol dengan warna primary menggunakan ButtonDefaults.buttonColors
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceEvenly
+            ) {
+                Button(
+                    onClick = { onbackbuttonClicked() },
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = colorResource(id = R.color.primary),
+                        contentColor = Color.White
+                    )
+                ) {
+                    Text(text = "Kembali")
+                }
